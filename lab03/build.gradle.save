@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'CSVDemo' //Changes based on program you want to run
+
+jar {
+	manifest {
+		attributes "Main-Class": "$mainClassName" //Used to run program
+	}
+}
+
+repositories {
+	apache()
+}
+
+dependencies {
+	compile group: 'org.apache.commons-csv',
+	name: 'commons-csv',
+	version: '1.8'
+}

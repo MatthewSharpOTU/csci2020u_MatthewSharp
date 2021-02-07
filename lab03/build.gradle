@@ -1,0 +1,40 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'csci2020u.lab03.CSVDemo' //Changes based on program you want to run
+
+sourceCompatibility = 1.7
+version = '1.0'
+jar {
+	manifest {
+		attributes "Main-Class": "$mainClassName", //Used to run program
+			   "Implementation-Title": 'Sample-Gradle',
+			   "Implementation-Version": version						
+	}
+}
+
+buildscript{
+	repositories{
+		flatDir dirs: '../proguard6.2.2/lib'
+	}
+	dependencies{
+		classpath ':proguard:'
+	}
+}
+
+task (minify, dependsOn: 'jar', type: proguard.gradle.ProGuardTask){
+	configuration 'proguard.cfg'
+	
+	injars 'build/libs/lab03-1.0.jar'
+	outjars 'build/libs/lab03-1.0.min.jar'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile group: 'org.apache.commons',
+	name: 'commons-csv',
+	version: '1.8'
+}
