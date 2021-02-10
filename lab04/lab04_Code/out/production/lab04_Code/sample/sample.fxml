@@ -1,0 +1,39 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="TOP_LEFT" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+    <!-- This is sets up and allows username input -->
+    <Label text = "Username:" GridPane.columnIndex="0"  GridPane.rowIndex="1" />
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <!-- This is sets up and allows password input -->
+    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <!-- This is sets up and allows full name input, and then saves it under the fullName id -->
+    <Label text = "Full Name:" GridPane.columnIndex="0"  GridPane.rowIndex="3" />
+    <TextField fx:id="fullName" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+    <!-- This is sets up and allows E-Mail input, and then saves it under the emailAddress id -->
+    <Label text = "E-Mail:" GridPane.columnIndex="0"  GridPane.rowIndex="4" />
+    <TextField fx:id="emailAddress" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+    <!-- This is sets up and allows phone number input, and then saves it under the phoneNumber id -->
+    <Label text = "Phone #:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+    <TextField fx:id="phoneNumber" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+    <!-- This is sets up and allows dat of birth input, and then saves it under the birthDay id -->
+    <Label text = "Date of Birth:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+    <DatePicker fx:id="birthDay" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+    <!-- This is sets up and allows button input, when pressed calls the handleRegisterButtonAction function -->
+    <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="7">
+        <Button onAction="#handleRegisterButtonAction" text="Register" />
+    </HBox>
+
+    <!-- This is sets up and allows button input, and then saves it under the action id -->
+    <Text fx:id = "buttonAction" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+</GridPane>
