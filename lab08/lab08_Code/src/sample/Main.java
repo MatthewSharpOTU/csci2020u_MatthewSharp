@@ -7,11 +7,15 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
-import javafx.scene.Parent;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -20,6 +24,7 @@ import java.io.*;
 public class Main extends Application {
     private String currentFilename; // Variable used to store the current file name
     private File selectedFile; // Variable used to store the current file
+    private ObservableList<StudentRecord> marks = FXCollections.observableArrayList(); // Creates the list of student data
 
     /**
      * This function runs the stage and will display the menu options and resulting data
@@ -33,7 +38,7 @@ public class Main extends Application {
         Scene scene = new Scene(new VBox());
         primaryStage.setTitle("Lab 08 Solution");
         primaryStage.setWidth(615);
-        primaryStage.setHeight(350);
+        primaryStage.setHeight(500);
 
         // Sets Menu and "File" option
         MenuBar menuBar = new MenuBar();
@@ -68,6 +73,58 @@ public class Main extends Application {
                     currentFilename = currentFilename.replaceFirst("[.][^.]+$", ""); // Regex to remove file's extension
                     VBox vbox = load(); // Calls the load method, returns the table data to be displayed on the scene
                     ((VBox) scene.getRoot()).getChildren().addAll(vbox);
+
+                    // Sets up "Add Student" Feature
+                    GridPane calculatedData = new GridPane();
+                    calculatedData.setAlignment(Pos.BOTTOM_CENTER);
+                    calculatedData.setHgap(10);
+                    calculatedData.setVgap(10);
+                    calculatedData.setPadding(new Insets(25, 25, 25, 25));
+                    Label idText = new Label("SID: ");
+                    Label midtermText = new Label("Midterm: ");
+                    Label assignmentText = new Label("Assignments: ");
+                    Label finalText = new Label("Final Exam: ");
+                    TextField idData = new TextField();
+                    TextField midtermData = new TextField();
+                    TextField assignmentData = new TextField();
+                    TextField finalData = new TextField();
+
+                    // Button to handle the new student
+                    Button btn = new Button("Add");
+                    HBox hbBtn = new HBox(10);
+                    hbBtn.setAlignment(Pos.BOTTOM_LEFT);
+                    hbBtn.getChildren().add(btn);
+                    final Text actionTarget = new Text();
+
+                    // Construct new data table
+                    calculatedData.add(idText, 0, 0);
+                    calculatedData.add(idData, 1, 0);
+                    calculatedData.add(midtermText, 0, 1);
+                    calculatedData.add(midtermData, 1, 1);
+                    calculatedData.add(assignmentText, 2, 0);
+                    calculatedData.add(assignmentData, 3, 0);
+                    calculatedData.add(finalText, 2, 1);
+                    calculatedData.add(finalData, 3, 1);
+                    calculatedData.add(hbBtn, 0, 2);
+                    calculatedData.add(actionTarget, 1, 2);
+
+                    ((VBox) scene.getRoot()).getChildren().addAll(calculatedData); // Adds the new GridPane to the scene
+
+                    // Event to handle the "add" button
+                    btn.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent actionEvent) {
+                            if (midtermData.getText().equals("") || assignmentData.getText().equals("")
+                                    || idData.getText().equals("") || finalData.getText().equals("")){
+                                actionTarget.setFill(Color.BLACK);
+                                actionTarget.setText("Please fill in all fields");
+                            }
+                            else{
+                                marks.add(new StudentRecord(idData.getText(), Float.parseFloat(assignmentData.getText()),
+                                        Float.parseFloat(midtermData.getText()), Float.parseFloat(finalData.getText())));
+                            }
+                        }
+                    });
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -131,14 +188,13 @@ public class Main extends Application {
      * @throws IOException - If there is an issue writing the data into the csv file
      */
     public void save() throws IOException {
-        ObservableList<StudentRecord> students = DataSource.getAllMarks();
         File savedFile = new File(currentFilename+".csv");
         savedFile.createNewFile();
         PrintWriter fileOutput = new PrintWriter(savedFile);
         fileOutput.println("SID, Assignments, Midterm, Final Exam"); // Writes first line of csv
 
         // Loop that writes each of the students data
-        for (StudentRecord student: students) {
+        for (StudentRecord student: marks) {
             fileOutput.println(student.getStudentID() + "," + student.getAssignmentGrade() + "," + student.getMidtermGrade() + "," + student.getFinalGrade());
         }
         fileOutput.close(); // Closes written file
@@ -154,7 +210,6 @@ public class Main extends Application {
         BufferedReader input = new BufferedReader(fileInput);
 
         String line = input.readLine(); // Reads the first line, which skips the headers
-        ObservableList<StudentRecord> marks = FXCollections.observableArrayList(); // Creates the list of student data
 
         // Loop which reads all data per student in the csv file
         while((line = input.readLine())!= null){
