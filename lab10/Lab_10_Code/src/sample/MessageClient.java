@@ -24,6 +24,9 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
+/**
+ * Client class to handle the User Interface
+ */
 public class MessageClient extends Application {
 
     public Stage stage = new Stage();

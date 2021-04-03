@@ -16,6 +16,9 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Vector;
 
+/**
+ * Server Class to handle the bulletin board
+ */
 public class BoardServer extends Application{
     protected Socket clientSocket = null;
     protected ServerSocket serverSocket = null;
@@ -33,6 +36,11 @@ public class BoardServer extends Application{
     public static int port = 8080;
     public static int max_client = 100;
 
+    /**
+     * Sets up and maintains the server
+     * @param primaryStage - Used to display the Server side board
+     * @throws Exception - Incase some form of error arises
+     */
     @Override
     public void start(Stage primaryStage) throws Exception {
         try{

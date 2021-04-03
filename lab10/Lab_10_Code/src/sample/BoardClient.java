@@ -23,6 +23,9 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
+/**
+ * Client class for when messages are sent and received
+ */
 public class BoardClient{
 
     protected Socket socket = null; // used to store client socket
@@ -33,6 +36,9 @@ public class BoardClient{
     public static String SERVER_ADDRESS = "localhost"; // server address
     public static int    SERVER_PORT = 8080; // server port
 
+    /**
+     * Constructor used to set up the socket and the input and output to the server
+     */
     public BoardClient(){
         try {
             socket = new Socket(SERVER_ADDRESS, SERVER_PORT);
@@ -49,6 +55,11 @@ public class BoardClient{
         }
     }
 
+    /**
+     * Sets the username and message of a socket
+     * @param user - inputted name
+     * @param message - inputted message
+     */
     public void setMSG(String user, String message) {
         networkOut.println("NAME " + user);
         try {
@@ -64,6 +75,9 @@ public class BoardClient{
         }
     }
 
+    /**
+     * Closes the active socket
+     */
     public void logout(){
         networkOut.println("LOGOUT");
         try {
@@ -74,6 +88,10 @@ public class BoardClient{
         }
     }
 
+    /**
+     * Retrieves all messages in the server
+     * @return - A list of all sent messages
+     */
     public String[] getMSG() {
         String[] messages = null;
         networkOut.println("LEN");

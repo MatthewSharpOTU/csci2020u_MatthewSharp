@@ -2,56 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../../lab05/lab05_Code/src/sample/MessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lab05/lab05_Code/src/sample/MessageServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab_10_Code.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Lab_10_Code/sample/BoardClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Lab_10_Code/sample/BoardHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Lab_10_Code/sample/BoardServer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Lab_10_Code/sample/Controller.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Lab_10_Code/sample/MessageClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Lab_10_Code/sample/MessageHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Lab_10_Code/sample/MessageServer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Lab_10_Code/sample/sample.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/BoardClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/BoardHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/BoardServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/MessageClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/MessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/MessageServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/sample.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab10_Code/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab10_Code/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab10_Code/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab10_Code/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab10_Code/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab10_Code/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab10_Code/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab10_Code/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab10_Code/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab10_Code/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab10_Code/lab10_Code.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab10_Code/out/production/lab10_Code/sample/BulletinBoardHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab10_Code/out/production/lab10_Code/sample/BulletinClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab10_Code/out/production/lab10_Code/sample/Controller.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab10_Code/out/production/lab10_Code/sample/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab10_Code/out/production/lab10_Code/sample/sample.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab10_Code/src/sample/BulletinBoardClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab10_Code/src/sample/BulletinBoardHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab10_Code/src/sample/BulletinClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab10_Code/src/sample/BulletinMessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab10_Code/src/sample/BulletinServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../assignment_1/Assignment_1_Code/src/sample/TestFile.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab04/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab04/.idea/compiler.xml" beforeDir="false" />
@@ -65,6 +15,8 @@
       <change beforePath="$PROJECT_DIR$/../../lab04/lab04.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab05/lab05_Code/out/production/lab05_Code/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab05/lab05_Code/out/production/lab05_Code/sample/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab05/lab05_Code/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab05/lab05_Code/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab05/lab05_Code/src/sample/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab05/lab05_Code/src/sample/MessageHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab05/lab05_Code/src/sample/MessageServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab05/lab05_Code/src/sample/MessageServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab08/lab08_Code/out/production/lab08_Code/sample/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab08/lab08_Code/out/production/lab08_Code/sample/Main$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab08/lab08_Code/out/production/lab08_Code/sample/Main$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab08/lab08_Code/out/production/lab08_Code/sample/Main$2$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab08/lab08_Code/out/production/lab08_Code/sample/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab08/lab08_Code/out/production/lab08_Code/sample/Main$2.class" afterDir="false" />
@@ -73,6 +25,10 @@
       <change beforePath="$PROJECT_DIR$/../../lab08/lab08_Code/out/production/lab08_Code/sample/Main$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab08/lab08_Code/out/production/lab08_Code/sample/Main$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab08/lab08_Code/out/production/lab08_Code/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab08/lab08_Code/out/production/lab08_Code/sample/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../lab08/lab08_Code/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab08/lab08_Code/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/BoardClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/BoardClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/BoardServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/BoardServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/MessageClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MessageClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MessageHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
